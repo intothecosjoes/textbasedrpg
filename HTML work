@@ -22,14 +22,14 @@
                 document.getElementById("Intro").innerHTML = "Hello Adventurer! You are currently sitting in a creaky old chair next to a roaring fire inside a small tavern. The name of this tavern is 'The Blood and Vine Tavern' in the small town of Belron. Your sharp senses are semi-diluted by the loud music and the dust cloud forming from towns people dancing on the dirt floor. However, in the middle of poor rendition of 'The Ballad of Agi the Proud' the weathered doors of the tavern burst open showing a battered middle-age human man. He takes a moment to catch his breath before loudly pleading 'Please, they have taken my boy! Someone please help me! My boy is gone!'";
             }
         </script>
-<div id="options">
+        <div id="options">
     <button onclick="choice1()">Ignore the man and return to your drink</button>
         <p id="choice1"></p>
-</div>
+        </div>
         <script>
             function choice1() {
                 document.getElementById("choice1").innerHTML = "You try to go back to your ale in peace. The townspeople all gather around the disheveled character and ask what happened. To your knowledge, they don't sound like this was an abnormal occurance.";
- }
+            }
         </script>
         <script>
             function visibility() {
