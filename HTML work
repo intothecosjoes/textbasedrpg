@@ -8,6 +8,7 @@
 
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
 
     </head>
 
@@ -17,17 +18,9 @@
         <p>Hello and welcome to this text  based story. I hope you enjoy the story and game play. This text based rpg is a homebrew story I have developed for dnd fifth edition. I adapted it into this activity as a practice tool for coding. Thank you for trying it out!</p>
         <button onclick="introReplace(); changevisibility()">Click here to get started!</button>
         <p id="Intro"></p>
-        <script>
-            function introReplace() {
-                document.getElementById("Intro").innerHTML = "Hello Adventurer! You are currently sitting in a creaky old chair next to a roaring fire inside a small tavern. The name of this tavern is 'The Blood and Vine Tavern' in the small town of Belron. Your sharp senses are semi-diluted by the loud music and the dust cloud forming from towns people dancing on the dirt floor. However, in the middle of poor rendition of 'The Ballad of Agi the Proud' the weathered doors of the tavern burst open showing a battered middle-age human man. He takes a moment to catch his breath before loudly pleading 'Please, they have taken my boy! Someone please help me! My boy is gone!'";
-            }
-            function changevisibility() {
-            document.getElementById("options").classList.remove("hidden");
-            }
-        </script>
         <hr>
 <div id="options" class="hidden">
-    <button onclick="choice1()">Ignore the man and return to your drink</button>
+    <button onclick="choice1(); changevisibility1()">Ignore the man and return to your drink</button>
         <p id="choice1"></p>
         <button onclick="choice1a()">Ask the man what happened</button>
         <p id="choice1a"></p>
@@ -41,11 +34,6 @@
  }
         </script>
         <script>
-            function visibility() {
-                document.getElementById("options")style.display = "block";
-            }
-        </script>
-        <script>
             function choice1a() {
                 document.getElementById("choice1a").innerHTML = "The man is grateful for your concern and explains. He is a farmer to the north near McAllister's Wood. Monsters from the forest came while he and his son were tilling the field. The monsters were walking tree saplings and overpowered the man. The took his son and dragged him back into the forest before knocking the man out.";
             }
@@ -56,7 +44,7 @@
             }
         </script>
 <!-- Here are the options from ignoring the man -->
-    <div class="hidden">
+    <div id="options2" class="hidden">
         <button onclick="choice2a()">Pay no mind and return to your drink</button>
         <p id="choice2a"></p>
     </div>
@@ -64,14 +52,20 @@
             function choice2a() {
             document.getElementById("choice2a").innerHTML = "You return to your drink, finish it, pay the bar keep and leave. Congrats! You have ended your story and are still alive. You're and asshole, but you are alive!"
             }
+            function changevisibility1() {
+                document.getElementById("options2").classList.remove("hidden");
+            }
         </script>
-        <aside>
-    
-        
-        
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-        
+<script>
+           function introReplace() {
+    document.getElementById("Intro").innerHTML = "Hello Adventurer! You are currently sitting in a creaky old chair next to a roaring fire inside a small tavern. The name of this tavern is 'The Blood and Vine Tavern' in the small town of Belron. Your sharp senses are semi-diluted by the loud music and the dust cloud forming from towns people dancing on the dirt floor. However, in the middle of poor rendition of 'The Ballad of Agi the Proud' the weathered doors of the tavern burst open showing a battered middle-age human man. He takes a moment to catch his breath before loudly pleading 'Please, they have taken my boy! Someone please help me! My boy is gone!'";
+}
+function changevisibility() {
+    document.getElementById("options").classList.remove("hidden");
+}
+</script>
+<script src="scripts.js"></script>
+       
     </body>
 
 </html>
